@@ -10,7 +10,7 @@ def best_fit(xdata, ydata):
 		print(len(xdata), " x data points and", len(ydata), 
 		      "y data points; please ensure your xdata and ydata 
 		      correspond.\n Your results will be skewed.")
-	m = (np.mean(xdata) * np.mean(ydata) - np.mean(xdata * ydata)) 
-	    / (np.mean(xdata)**2 - np.mean(xdata**2))
+	m = ((np.mean(xdata) * np.mean(ydata) - np.mean(xdata * ydata)) 
+	     / (np.mean(xdata)**2 - np.mean(xdata**2)))
 	b = np.mean(ydata) - m * np.mean(xdata)
 	return m, b
